@@ -1,0 +1,19 @@
+{
+  "name": "wikigrab",
+  "version": "1.0.0",
+  "description": "Download Wiki pages to a specified directory from the terminal",
+  "main": "index.js",
+  "scripts": {
+    "launch": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Wiki",
+    "Scraper"
+  ],
+  "author": "newagemob",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^13.1.3"
+  }
+}

@@ -1,0 +1,2 @@
+node >= Version 14+
+npm >= Version 8+
