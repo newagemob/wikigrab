@@ -11,9 +11,12 @@ const outputDir = process.argv[3] // create downloads directory in path to hold 
 
 if (!fs.existsSync(downloadDir)) {
   fs.mkdirSync(downloadDir)
-  fs.mkdirSync(downloadDir + '/' + outputDir)
+  fs.mkdirSync(downloadDir + '/' + outputDir) // create download directory if it doesn't exist
 } else {
-  fs.mkdirSync(downloadDir + '/' + outputDir)
+  // if output directory exists, store the search term in the existing directory
+  console.log(`${outputDir} directory already exists...`)
+  console.log(`Placing ${searchTerm} in ${outputDir} directory...`)
+  fs.writeFileSync(downloadDir + '/' + outputDir + '/' + searchTerm + '.pdf', searchTerm)
 }
 
 // show instructions on launch
@@ -21,7 +24,8 @@ if (!searchTerm || !outputDir) {
   console.log('Usage: node index.js <search term> <output directory>')
   process.exit(1)
 } else {
-  console.log('Searching Wiki for ' + searchTerm + '...')
+  console.log('📜🤖 Article Downloaded 🤖📜')
+  console.log(`Saved in ${outputDir} 👾👾👾`)
 }
 
 // search Google for Wiki articles
