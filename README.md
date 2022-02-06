@@ -1,5 +1,5 @@
 # WikiGrab
-***Download Wiki pages to a specified directory from the terminal***
+***Download Wiki pages to a specified directory with Node in the terminal***
 
 ## Requirements
 **System Requirements**
